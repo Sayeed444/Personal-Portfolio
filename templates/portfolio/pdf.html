@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    pdf
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h2 class="text-center">open your pdf file</h2>
+    <br>
+    <div class="text-center">
+        <a href="{% static 'portfolio/Sayeed.pdf' %}">
+            <button class="btn btn-default">Download</button>
+        </a>
+    </div>
+
+{% endblock %}

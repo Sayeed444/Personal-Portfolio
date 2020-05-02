@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    blog details
+{% endblock %}
+
+{% block content %}
+    <br>
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    {{ blog.title }}
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <div class="image_about">
+                            <img class="detailsImg " src="{{ blog.image.url }}" >
+                            <p class="text-justify"style="font-size: 15px">{{ blog.description }}</p>
+                        </div>
+
+                        <footer class="blockquote-footer">Date Time: <cite title="Source Title">{{ blog.datetime }}</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

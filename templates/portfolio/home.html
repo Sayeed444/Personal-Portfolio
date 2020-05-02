@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    home page
+{% endblock %}
+
+{% block content %}
+    <section class="homeSection">
+        <div class="navs_container mainInfoSection">
+  			<div class="text">
+  				<h1>
+  					<span>H</span>
+  					<span class="m-left">i</span>
+  					<span class="m-left">,</span>
+  					<br>
+  					<span>I</span>
+  					<span class="m-left">'</span>
+  					<span class="m-left">m</span>
+  					<span class="name">S</span>
+  					<span class="m-left name">a</span>
+  					<span class="m-left name">y</span>
+  					<span class="m-left name">e</span>
+  					<span class="m-left name">e</span>
+  					<span class="m-left name">d</span>
+  					<span class="m-left">,</span>
+  					<br>
+  					<span>W</span>
+  					<span class="m-left">e</span>
+  					<span class="m-left">b</span>
+  					<span>D</span>
+  					<span class="m-left">e</span>
+  					<span class="m-left">s</span>
+  					<span class="m-left">i</span>
+  					<span class="m-left">g</span>
+  					<span class="m-left">n</span>
+  					<span class="m-left">e</span>
+  					<span class="m-left">r</span>
+  					<span class="m-left">.</span>
+  				</h1>
+  				<p class="text_skill">CSS / JavaScript / Django</p>
+  				<a href="#">Contact Me </a>
+  			</div>
+  			<div class="profile-image">
+  				<img src="{% static 'portfolio/Amin.jpg' %}">
+  			</div>
+  		</div>
+    </section>
+            <!-- =========================================== my Project ===================================== -->
+    <div class="container">
+        <h2 class="text-center myProject">আমার প্রোজেক্ট</h2>
+
+            <div class="row">
+                {% for project in projects %}
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img src="{{ project.image.url }}" class="mx-auto d-block" style="width:100%">
+                            <div class="card-body" style="background: #EAEAEA">
+                                <h5 class="card-title text-center projectHeaderName">{{ project.name }}</h5>
+                                <p class="card-text" style="text-align: justify;font-size: 14px">{{ project.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                {% endfor %}
+            </div>
+
+    </div>
+            <!-- =========================================== End project ===================================== -->
+    <section>
+        <!-- =========================================== Services ===================================== -->
+		<div class="services" id="services">
+			<div class="container">
+				<h2 class="text-center myService">আমার সার্ভিস</h2>
+				<p class="text-center">
+					Who am I, that the lord of all the earth . Would care to feel my hurt? Who am I, <br>that the bright and morning star , Would choose to light the way
+				</p>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="services-box">
+							<div class="services-icon">
+								<i class='fab fa-slack' ></i><span>Django</span>
+							</div>
+							<p>	Who am I, that the lord of all the earth . Would care to feel my hurt? Who am I, <br>that the bright and morning star , Would choose to light the way</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="services-box">
+							<div class="services-icon">
+								<i class="fa fa-laptop"></i><span>Devlopment</span>
+							</div>
+							<p>	Who am I, that the lord of all the earth . Would care to feel my hurt? Who am I, <br>that the bright and morning star , Would choose to light the way</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="services-box">
+							<div class="services-icon">
+								<i class="fab fa-python"></i><span>Python</span>
+							</div>
+							<p>	Who am I, that the lord of all the earth . Would care to feel my hurt? Who am I, <br>that the bright and morning star , Would choose to light the way</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--===================================== End Services ======================================== -->
+		<!--=====================================  Contact ======================================== -->
+		<div class="contact" id='contact'>
+			<div class="text-center container">
+				<h2> Contact Me</h2>
+				<p>	Who am I, that the lord of all the earth . Would care to feel my hurt? Who am I, <br>that the bright and morning star , Would choose to light the way</p>
+
+				<div class="row">
+					<div class="col-md-4">
+						<i class="fa fa-phone icon_s"></i>
+						<p>+088 155789748</p>
+					</div>
+
+					<div class="col-md-4">
+						<i class="fa fa-envelope icon_s"></i>
+						<p> bd.otf.124@gmail.com</p>
+					</div>
+
+					<div class="col-md-4">
+						<i class="fab fa-internet-explorer icon_s"></i>
+
+						<p>www.124.bd</p>
+					</div>
+				</div>
+				<button class="btn btn-secondary"><i class="fa fa-download"></i><a class="contactButton" href="{% static 'portfolio/Sayeed.pdf' %}">&nbsp;Resume</a></button>
+				<button class="btn btn-secondary"><i class="fab fa-github"></i><a class="contactButton" href="https://github.com/Sayeed444">&nbsp;Github</a> </button>
+			</div>
+		</div>
+		<!--=====================================  End Contact ======================================== -->
+		<div class="footer text-center">
+			<h2>coming soon 124</h2>
+		</div>
+    </section>
+{% endblock %}
